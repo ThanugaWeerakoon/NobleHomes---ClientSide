@@ -30,7 +30,7 @@ function Admin() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       // Redirect to external URL after successful login
-      window.location.href = "https://noble-homes-galle-real-estate-admin-nafe.vercel.app/";  // External redirect
+      window.location.href = "https://noble-homes-server-side.vercel.app/";  // External redirect
     } catch (err) {
       setError(err.message); // Show Firebase authentication error
     }
