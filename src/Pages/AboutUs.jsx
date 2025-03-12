@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "../Pages/styles.css";
 import Footer from "../Components/Footer";
 import Agents from "../Components/Agents";
-import Testimonials from "../Components/Testimonials";
+import Fab from "../Components/Fab";
 import Dream from "../Components/Dream";
 
 const AboutUs = () => {
@@ -98,9 +98,7 @@ const AboutUs = () => {
       </div>
 
       <Agents />
-
-      
-
+      <Fab />
       <Footer />
     </div>
   );
