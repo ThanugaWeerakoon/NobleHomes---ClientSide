@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../firebase";
 import PropertySearch from "../Components/PropertySearch";
 import Footer from "../Components/Footer";
+import Fab from "../Components/Fab"
 
 const Land = () => {
   const [properties, setProperties] = useState([]);
@@ -114,6 +115,7 @@ const Land = () => {
         )}
       </div>
 
+      <Fab />
       <Footer />
     </div>
   );
