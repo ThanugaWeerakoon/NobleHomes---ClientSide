@@ -3,107 +3,67 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
   faInstagram,
-  faTwitter,
-  faPinterest,
+  faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const [isPropertyDropdownOpen, setIsPropertyDropdownOpen] = useState(false);
 
-  const togglePropertyDropdown = () => {
-    setIsPropertyDropdownOpen(!isPropertyDropdownOpen);
-  };
-
   return (
-    <div className="mt-[60px] bg-[#6F97FF] py-10">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-        
-        {/* NobleHome Section */}
-        <div className="text-left text-white">
-          <h2 className="font-moul text-2xl sm:text-3xl font-bold tracking-tight">
-            NobleHome
-            <span className="block mt-1 text-lg sm:text-xl">Galle</span>
-          </h2>
-          <p className="mt-5 text-sm sm:text-base font-light">
-            Discover exceptional living in Galle with NobleHome. Our properties
-            combine comfort, elegance, and convenience to offer you a place
-            you’ll be proud to call home. Whether you're searching for a cozy
-            residence, a spacious family home, or a prime commercial space,
-            NobleHome provides curated options tailored to your lifestyle.
-            Experience seamless buying, selling, and renting services designed
-            to make your real estate journey as effortless as possible. Find
-            your dream property with NobleHome Galle, where your ideal space
-            awaits.
+    <footer className="bg-gradient-to-r from-purple-700 to-indigo-600 text-white pt-16">
+      <div className="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* About */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4">NobleHome Galle</h2>
+          <p className="text-sm text-gray-200 mb-4">
+            Discover exceptional living in Galle with NobleHome. Curated
+            properties for every lifestyle.
           </p>
-          
-          <div className="flex space-x-4 mt-6">
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-[#3b5998] transition-colors duration-300"
-            >
-              <FontAwesomeIcon icon={faFacebookF} size="lg" />
+          <div className="flex space-x-4 mt-2">
+            <a href="#" className="hover:text-blue-500 transition">
+              <FontAwesomeIcon icon={faFacebookF} />
             </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-[#1DA1F2] transition-colors duration-300"
-            >
-              <FontAwesomeIcon icon={faTwitter} size="lg" />
+            <a href="https://wa.me/94778354380" target="_blank"   rel="noopener noreferrer" className="hover:text-blue-400 transition">
+              <FontAwesomeIcon icon={faWhatsapp} />
             </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-[#E1306C] transition-colors duration-300"
-            >
-              <FontAwesomeIcon icon={faInstagram} size="lg" />
-            </a>
-            <a
-              href="https://www.pinterest.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-[#E60023] transition-colors duration-300"
-            >
-              <FontAwesomeIcon icon={faPinterest} size="lg" />
+            <a href="#" className="hover:text-pink-500 transition">
+              <FontAwesomeIcon icon={faInstagram} />
             </a>
           </div>
         </div>
 
-        {/* Navigation Section */}
-        <div className="text-center text-white">
-          <h2 className="font-moul text-2xl sm:text-3xl font-bold tracking-tight">
-            NAVIGATION
-          </h2>
-          <ul className="mt-6 space-y-2 text-sm sm:text-base">
+        {/* Quick Links */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Quick Links</h2>
+          <ul className="space-y-2 text-sm">
             <li>
-              <a href="/" className="hover:underline transition-colors duration-300">
+              <a href="/" className="hover:underline">
                 Home
               </a>
             </li>
             <li>
-              <a href="/about" className="hover:underline transition-colors duration-300">
+              <a href="/about" className="hover:underline">
                 About
               </a>
             </li>
             <li>
-              <a
-                onClick={togglePropertyDropdown}
-                className="cursor-pointer hover:underline transition-colors duration-300"
+              <button
+                onClick={() =>
+                  setIsPropertyDropdownOpen(!isPropertyDropdownOpen)
+                }
+                className="hover:underline cursor-pointer"
               >
                 Property
-              </a>
+              </button>
               {isPropertyDropdownOpen && (
                 <ul className="ml-4 mt-2 space-y-1">
                   <li>
-                    <a href="/land" className="text-white hover:underline transition-colors duration-300">
+                    <a href="/land" className="hover:underline">
                       Land
                     </a>
                   </li>
                   <li>
-                    <a href="/house" className="text-white hover:underline transition-colors duration-300">
+                    <a href="/house" className="hover:underline">
                       House
                     </a>
                   </li>
@@ -111,26 +71,21 @@ const Footer = () => {
               )}
             </li>
             <li>
-              <a href="/contact" className="hover:underline transition-colors duration-300">
+              <a href="/contact" className="hover:underline">
                 Contact
               </a>
             </li>
           </ul>
         </div>
 
-        {/* Sales Support Section */}
-        <div className="text-left text-white">
-          <h2 className="font-moul text-2xl sm:text-3xl font-bold tracking-tight">
-            SALES SUPPORT
-          </h2>
-          <p className="mt-4 text-sm sm:text-base font-light">
-            <strong className="text-lg sm:text-xl">Phone:</strong>
-            <br />
-            +(94) 77 835 4380
+        {/* Sales Support */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Sales Support</h2>
+          <p className="text-sm">
+            <strong>Phone:</strong> +(94) 77 835 4380
           </p>
-          <p className="mt-4 text-sm sm:text-base font-light">
-            <strong className="text-lg sm:text-xl">Email:</strong>
-            <br />
+          <p className="text-sm mt-2">
+            <strong>Email:</strong>{" "}
             <a
               href="mailto:noblehomegalle15@gmail.com"
               className="hover:underline"
@@ -140,13 +95,30 @@ const Footer = () => {
           </p>
         </div>
 
+        {/* Newsletter */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4">Subscribe</h2>
+          <p className="text-sm text-gray-200 mb-4">
+            Sign up for the latest property updates and exclusive offers.
+          </p>
+          <form className="flex flex-col space-y-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="px-4 py-2 rounded-md text-black focus:outline-none"
+            />
+            <button className="bg-white text-purple-700 font-semibold px-4 py-2 rounded-md hover:bg-gray-200 transition">
+              Subscribe
+            </button>
+          </form>
+        </div>
       </div>
 
-      {/* Footer Bottom */}
-      <div className="text-center text-white mt-10 pt-6 border-t border-white border-opacity-20 text-sm">
-        <p>&copy; {new Date().getFullYear()} NobleHome Galle. All rights reserved.</p>
+      <div className="text-center text-gray-200 mt-12 pb-6 border-t border-white border-opacity-20 text-sm">
+        &copy; {new Date().getFullYear()} NobleHome Galle. Developed by
+        LegionCode IT Solutions.
       </div>
-    </div>
+    </footer>
   );
 };
 
