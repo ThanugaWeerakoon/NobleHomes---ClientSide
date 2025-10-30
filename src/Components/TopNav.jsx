@@ -62,7 +62,7 @@ const TopNav = () => {
           <div className="flex items-center">
             <Link to="/admin">
               <Typography variant="small" color="blue-gray" className="cursor-pointer text-sm font-medium hover:text-blue-500 transition-all duration-300 ease-in-out">
-                ADMIN
+               Login
               </Typography>
             </Link>
           </div>
