@@ -55,12 +55,21 @@ const Land = () => {
     });
   }, [properties, propertyType, selectedCity]);
 
-  // Utility function for price formatting
-  const formatPrice = (price) => {
-    return price
-      ? `LKR${Number(price).toLocaleString()}.00`
-      : "Price not available";
-  };
+// Utility function for price formatting
+const formatPrice = (price) => {
+  if (price === null || price === undefined || isNaN(price)) {
+    return "Price not available";
+  }
+
+  // Ensure price is a number
+  const numericPrice = Number(price);
+
+  // Format with commas and 2 decimal places
+  return `LKR ${numericPrice.toLocaleString("en-LK", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  })}`;
+};
 
   return (
     <div className="mx-auto">
