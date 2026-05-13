@@ -13,10 +13,10 @@ const Land = () => {
 
   const navigate = useNavigate();
 
-  // Fetch properties from Firestore
+
   const fetchProperties = async () => {
     try {
-      const propertiesCollection = collection(db, "homes"); // Change this to match your Firestore structure
+      const propertiesCollection = collection(db, "homes"); 
       const propertySnapshot = await getDocs(propertiesCollection);
       const propertyList = propertySnapshot.docs.map((doc) => ({
         id: doc.id,

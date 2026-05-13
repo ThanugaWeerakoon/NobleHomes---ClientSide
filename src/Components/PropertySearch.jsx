@@ -58,6 +58,9 @@ const PropertySearch = ({ onSearch }) => {
             </option>
             <option value="house">House</option>
             <option value="land">Land</option>
+              <option value="villa">Villas</option>
+              <option value="apartment">Apartments</option>
+              <option value="hotel">Hotels</option>
           </select>
 
           {/* City Filter */}
